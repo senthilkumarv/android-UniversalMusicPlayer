@@ -63,7 +63,7 @@ public interface Playback {
     /**
      * @return pos if currently playing an item
      */
-    int getCurrentStreamPosition();
+    long getCurrentStreamPosition();
 
     /**
      * Set the current position. Typically used when switching players that are in
@@ -71,7 +71,7 @@ public interface Playback {
      *
      * @param pos position in the stream
      */
-    void setCurrentStreamPosition(int pos);
+    void setCurrentStreamPosition(long pos);
 
     /**
      * Query the underlying stream and update the internal last known stream position.

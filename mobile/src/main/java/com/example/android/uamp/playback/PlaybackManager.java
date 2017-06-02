@@ -229,11 +229,11 @@ public class PlaybackManager implements Playback.Callback {
         }
         // suspend the current one.
         int oldState = mPlayback.getState();
-        int pos = mPlayback.getCurrentStreamPosition();
+        long pos = mPlayback.getCurrentStreamPosition();
         String currentMediaId = mPlayback.getCurrentMediaId();
         mPlayback.stop(false);
         playback.setCallback(this);
-        playback.setCurrentStreamPosition(pos < 0 ? 0 : pos);
+        playback.setCurrentStreamPosition(pos < 0L ? 0L : pos);
         playback.setCurrentMediaId(currentMediaId);
         playback.start();
         // finally swap the instance

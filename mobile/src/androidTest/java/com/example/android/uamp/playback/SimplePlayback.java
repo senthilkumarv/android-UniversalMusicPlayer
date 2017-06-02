@@ -49,13 +49,12 @@ class SimplePlayback implements Playback {
     }
 
     @Override
-    public int getCurrentStreamPosition() {
+    public long getCurrentStreamPosition() {
         return 0;
     }
 
     @Override
-    public void setCurrentStreamPosition(int pos) {
-
+    public void setCurrentStreamPosition(long pos) {
     }
 
     @Override
